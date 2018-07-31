@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PackageId>LykkePay.Common</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>LykkePay</Authors>
+    <Company>Lykke</Company>
+    <PackageTags>LykkePay</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/LykkeCity/LykkePay.Common.git</RepositoryUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/14153330?v=3&amp;s=200</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/LykkeCity/LykkePay.Common</PackageProjectUrl>
+    <Description>LykkePay common tools and utilities</Description>
+    <Copyright>Copyright 2018 (c) Lykke Corp. All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.1\LykkePay.Common.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lykke.Common" Version="7.0.2" />
+    <PackageReference Include="Lykke.Common.ApiLibrary" Version="1.10.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>
