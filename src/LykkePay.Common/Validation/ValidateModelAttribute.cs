@@ -23,7 +23,8 @@ namespace LykkePay.Common.Validation
 
                 foreach (var parameter in parameters)
                 {
-                    if (context.ActionArguments.Count == 0)
+                    if (context.ActionArguments.Count == 0
+                        || !context.ActionArguments.ContainsKey(parameter.Name))
                         continue;
 
                     var argument = context.ActionArguments[parameter.Name];
