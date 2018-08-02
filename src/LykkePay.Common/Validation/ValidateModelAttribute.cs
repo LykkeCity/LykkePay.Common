@@ -23,11 +23,9 @@ namespace LykkePay.Common.Validation
 
                 foreach (var parameter in parameters)
                 {
-                    if (context.ActionArguments.Count == 0
-                        || !context.ActionArguments.ContainsKey(parameter.Name))
-                        continue;
-
-                    var argument = context.ActionArguments[parameter.Name];
+                    var argument = context.ActionArguments.ContainsKey(parameter.Name)
+                        ? context.ActionArguments[parameter.Name]
+                        : null;
 
                     EvaluateValidationAttributes(parameter, argument, context.ModelState);
                 }
